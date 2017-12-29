@@ -89,7 +89,7 @@ module.exports = function (grunt) {
     },
   });
 
-  require(parentFolderName === "node_modules" ? "load-grunt-parent-tasks" : "load-grunt-tasks")(grunt);
+  require(parentFolderName === "node_modules" ? "load-grunt-parent-tasks" : "load-grunt-tasks")(grunt, {scope: 'dependencies'});
   grunt.registerTask("default", [
     "copy",
     "concat",
